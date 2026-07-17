@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Dean Hattenhauer",
-    "label": "Infrastructure Engineer & Backend Developer",
+    "label": "Backend Developer & Infrastructure Engineer",
     "email": "dean.hattenhauer@outlook.com",
     "phone": "479-255-8230",
     "url": "https://deanhattenhauer.dev",
@@ -22,54 +22,10 @@
         "url": "https://github.com/deanhattenhauer"
       }
     ],
-    "summary": "Infrastructure Engineer and backend developer building toward a DevOps career through hands-on lab work and structured backend engineering study. Independently designed and operate a self-hosted Linux server running a full production-adjacent stack: Docker-containerized services, Prometheus and Grafana monitoring, Tailscale mesh VPN, Pi-hole DNS, automated cron-based maintenance and backup pipelines, and a custom Flask application, all managed from the command line. Completed backend engineering coursework covering Python, Go, HTTP clients and servers, Docker, SQL, data structures, Git, and Linux. Brings 8+ years of process improvement and automation experience, a Lean Six Sigma Black Belt, and a professional scripting background in PowerShell and JavaScript. Approaches infrastructure the same way: understand it before you expand it.",
+    "summary": "Backend developer and infrastructure engineer building toward a career in software engineering and DevOps through hands-on project work and structured backend engineering study. Completed backend engineering coursework covering Python, Go, HTTP clients and servers, SQL, data structures, and Git - building real projects including a Go REST API with JWT authentication and PostgreSQL, and an LLM-powered autonomous agent using the Google Gemini API. Also independently designed and operate a self-hosted Linux server running a full production-adjacent stack: Docker-containerized services, Prometheus and Grafana monitoring, Tailscale mesh VPN, and automated cron-based maintenance and backup pipelines - applying the same systems-level thinking to infrastructure. Brings 8+ years of process improvement and automation experience, a Lean Six Sigma Black Belt, and a professional scripting background in PowerShell and JavaScript. Approaches every system the same way: understand it before you expand it.",
     "picture": "dean_hattenhauer_professional_picture.jpeg"
   },
   "skills": [
-    {
-      "name": "Infrastructure & Systems",
-      "keywords": [
-        "Ubuntu Server 24.04 LTS",
-        "Linux CLI",
-        "Bash / Shell Scripting",
-        "SSH / Key-based Auth",
-        "systemd",
-        "cron",
-        "LVM / Storage Management",
-        "nmcli / WiFi Networking",
-        "Package Management (apt)",
-        "User & Permission Management",
-        "Headless Server Administration"
-      ]
-    },
-    {
-      "name": "Containerization & Networking",
-      "keywords": [
-        "Docker",
-        "Docker Compose",
-        "Portainer",
-        "Container Networking",
-        "Named Volumes / Bind Mounts",
-        "Dockerfile",
-        "Tailscale / WireGuard",
-        "Pi-hole / DNS",
-        "Samba / SMB",
-        "Multi-path Networking",
-        "VPN Management"
-      ]
-    },
-    {
-      "name": "Monitoring & Observability",
-      "keywords": [
-        "Prometheus",
-        "Grafana / PromQL",
-        "Netdata",
-        "Uptime Kuma",
-        "healthchecks.io",
-        "Time-series Metrics",
-        "Alerting (Telegram)"
-      ]
-    },
     {
       "name": "Languages",
       "keywords": [
@@ -95,6 +51,50 @@
         "Functional Programming",
         "Data Structures & Algorithms",
         "LLM API Integration"
+      ]
+    },
+    {
+      "name": "Containerization & Networking",
+      "keywords": [
+        "Docker",
+        "Docker Compose",
+        "Portainer",
+        "Container Networking",
+        "Named Volumes / Bind Mounts",
+        "Dockerfile",
+        "Tailscale / WireGuard",
+        "Pi-hole / DNS",
+        "Samba / SMB",
+        "Multi-path Networking",
+        "VPN Management"
+      ]
+    },
+    {
+      "name": "Infrastructure & Systems",
+      "keywords": [
+        "Ubuntu Server 24.04 LTS",
+        "Linux CLI",
+        "Bash / Shell Scripting",
+        "SSH / Key-based Auth",
+        "systemd",
+        "cron",
+        "LVM / Storage Management",
+        "nmcli / WiFi Networking",
+        "Package Management (apt)",
+        "User & Permission Management",
+        "Headless Server Administration"
+      ]
+    },
+    {
+      "name": "Monitoring & Observability",
+      "keywords": [
+        "Prometheus",
+        "Grafana / PromQL",
+        "Netdata",
+        "Uptime Kuma",
+        "healthchecks.io",
+        "Time-series Metrics",
+        "Alerting (Telegram)"
       ]
     },
     {
@@ -294,6 +294,67 @@
   ],
   "projects": [
     {
+      "name": "Chirpy - REST API in Go",
+      "description": "Built a fully functional Twitter-like REST API in Go with user authentication, JWT access and refresh tokens, full CRUD for posts with ownership authorization, and a webhook endpoint for membership upgrades. PostgreSQL backend with Goose migrations and SQLC for type-safe queries. Passwords hashed with argon2id.",
+      "highlights": ["Go, PostgreSQL, JWT, SQLC, Goose, REST API, argon2id"],
+      "keywords": [
+        "Go",
+        "PostgreSQL",
+        "JWT",
+        "SQLC",
+        "Goose",
+        "REST API",
+        "argon2id"
+      ]
+    },
+    {
+      "name": "AI Agent in Python",
+      "description": "Built an LLM-powered autonomous agent using the Google Gemini API capable of reading, writing, and executing code via tool-use feedback loops. Demonstrates practical LLM API integration, context window management, function calling, and automated code execution; concepts directly applicable to infrastructure automation and AI-assisted tooling.",
+      "highlights": [
+        "Python, Google Gemini API, LLM Tool Use, Agentic Workflows, Function Calling"
+      ],
+      "keywords": [
+        "Python",
+        "Google Gemini",
+        "LLM",
+        "AI",
+        "Automation",
+        "Function Calling",
+        "Agentic"
+      ]
+    },
+    {
+      "name": "Flask + MySQL Inventory Application",
+      "description": "Built and deployed a full-stack CRUD web application via Docker Compose running on the home lab server. Two-tab UI managing household supplies and tracked assets. Demonstrates end-to-end containerized application deployment: Python/Flask backend, MySQL database with persistent Docker volume, multi-container orchestration via Compose, and service accessible over Tailscale from any device.",
+      "highlights": ["Python, Flask, MySQL, Docker, Docker Compose, TailScale"],
+      "keywords": [
+        "Python",
+        "Flask",
+        "MySQL",
+        "Docker",
+        "Docker Compose",
+        "REST",
+        "Full-Stack",
+        "Self-Hosted"
+      ]
+    },
+    {
+      "name": "Static Site Generator (Python)",
+      "description": "Built a fully functional static site generator in Python from scratch. Converts Markdown files into a complete HTML website using a recursive file system crawler, custom Markdown parser, and object-oriented node architecture.",
+      "highlights": [
+        "Python, OOP, Markdown Parsing, Regex, Recursion, File System Operations"
+      ],
+      "keywords": [
+        "Python",
+        "Static Site Generation",
+        "OOP",
+        "Markdown",
+        "Regex",
+        "Recursion",
+        "File System"
+      ]
+    },
+    {
       "name": "Home Lab - Infrastructure & Networking",
       "description": "Designed and built a self-hosted server stack from scratch on repurposed hardware running Ubuntu Server 24.04 LTS headless, managed entirely from the command line via SSH. Deployed Jellyfin for self-hosted media, Samba for cross-platform file sharing, Pi-hole for network-wide DNS ad blocking, and Tailscale mesh VPN for secure remote access without open firewall ports. Worked around a network-provided router that blocks custom upstream DNS by running Pi-hole per-device; blocked 40%+ of all DNS queries on day one. Unified all services under a Homepage dashboard and resolved a multi-path networking failure where the dashboard was inaccessible over Tailscale but worked locally; diagnosed to HOMEPAGE_ALLOWED_HOSTS missing the Tailscale address. Active infrastructure goal: full Docker containerization so the entire stack migrates to new hardware via compose file and volume copy only.",
       "highlights": [
@@ -338,51 +399,27 @@
       ]
     },
     {
-      "name": "Flask + MySQL Inventory Application",
-      "description": "Built and deployed a full-stack CRUD web application via Docker Compose running on the home lab server. Two-tab UI managing household supplies and tracked assets. Demonstrates end-to-end containerized application deployment: Python/Flask backend, MySQL database with persistent Docker volume, multi-container orchestration via Compose, and service accessible over Tailscale from any device.",
-      "highlights": ["Python, Flask, MySQL, Docker, Docker Compose, TailScale"],
+      "name": "Audit Workflow Automation (Foundation Risk Partners)",
+      "description": "Automated internal audit workflows using PowerShell, covering file attachment handling, report archiving, and SLA alert triggering. Cut manual workload by 60% and significantly improved consistency and audit turnaround time across the compliance reporting pipeline.",
+      "highlights": ["PowerShell, Excel, Process Automation"],
       "keywords": [
-        "Python",
-        "Flask",
-        "MySQL",
-        "Docker",
-        "Docker Compose",
-        "REST",
-        "Full-Stack",
-        "Self-Hosted"
+        "PowerShell",
+        "Excel",
+        "Automation",
+        "Process Improvement",
+        "Scripting"
       ]
     },
     {
-      "name": "Static Site Generator (Python)",
-      "description": "Built a fully functional static site generator in Python from scratch. Converts Markdown files into a complete HTML website using a recursive file system crawler, custom Markdown parser, and object-oriented node architecture.",
-      "highlights": [
-        "Python, OOP, Markdown Parsing, Regex, Recursion, File System Operations"
-      ],
+      "name": "RCPS Defect Reduction Initiative (Foundever)",
+      "description": "Led Root Cause Problem Solving workshops targeting systemic QA performance failures across multiple sites. Reduced recurring defects by 50% and improved Six Sigma performance from 3.09 to 3.58 sigma using DMAIC methodology.",
+      "highlights": ["Six Sigma DMAIC, RCA Frameworks"],
       "keywords": [
-        "Python",
-        "Static Site Generation",
-        "OOP",
-        "Markdown",
-        "Regex",
-        "Recursion",
-        "File System"
-      ],
-      "url": "https://github.com/deanhattenhauer/Static-Site-Generator"
-    },
-    {
-      "name": "AI Agent in Python",
-      "description": "Built an LLM-powered autonomous agent using the Google Gemini API capable of reading, writing, and executing code via tool-use feedback loops. Demonstrates practical LLM API integration, context window management, function calling, and automated code execution; concepts directly applicable to infrastructure automation and AI-assisted tooling.",
-      "highlights": [
-        "Python, Google Gemini API, LLM Tool Use, Agentic Workflows, Function Calling"
-      ],
-      "keywords": [
-        "Python",
-        "Google Gemini",
-        "LLM",
-        "AI",
-        "Automation",
-        "Function Calling",
-        "Agentic"
+        "RCA",
+        "Six Sigma",
+        "DMAIC",
+        "Process Improvement",
+        "Quality Management"
       ]
     },
     {
@@ -400,18 +437,6 @@
       ]
     },
     {
-      "name": "Audit Workflow Automation (Foundation Risk Partners)",
-      "description": "Automated internal audit workflows using PowerShell, covering file attachment handling, report archiving, and SLA alert triggering. Cut manual workload by 60% and significantly improved consistency and audit turnaround time across the compliance reporting pipeline.",
-      "highlights": ["PowerShell, Excel, Process Automation"],
-      "keywords": [
-        "PowerShell",
-        "Excel",
-        "Automation",
-        "Process Improvement",
-        "Scripting"
-      ]
-    },
-    {
       "name": "Portfolio Site & Live Resume System",
       "description": "Built a custom portfolio site driven by a JSON schema as a single source of truth. Content updates in one file propagate across all rendered sections automatically. Designed and developed from scratch with a focus on clean structure, ATS compatibility, and maintainability.",
       "highlights": ["HTML, CSS, JavaScript, JSON Schema"],
@@ -421,43 +446,6 @@
         "CSS",
         "JSON Schema",
         "Front-End Development"
-      ]
-    },
-    {
-      "name": "UI Automation with Selenium & Katalon",
-      "description": "Built automated UI test scripts in Python using Selenium WebDriver to validate form and navigation flows. Explored Katalon Studio for codeless test automation and reporting dashboards.",
-      "highlights": [
-        "Selenium WebDriver, Python, Katalon Studio, Automation Frameworks"
-      ],
-      "keywords": ["Selenium", "Python", "Katalon", "UI Automation"]
-    },
-    {
-      "name": "API Testing with Postman",
-      "description": "Built 30+ Postman tests validating CRUD and authentication endpoints. Used JavaScript assertions and dynamic environment variables to chain requests and verify response codes, payloads, and performance thresholds.",
-      "highlights": ["Postman, REST API, JavaScript Assertions, Auth Tokens"],
-      "keywords": ["Postman", "REST API", "CRUD", "JavaScript", "API Testing"]
-    },
-    {
-      "name": "Performance Testing with JMeter",
-      "description": "Configured Thread Groups, Controllers, and Listeners to simulate user load and analyze response time and throughput. Applied performance metrics (utilization, robustness, scalability) to identify bottlenecks under varying test conditions.",
-      "highlights": ["JMeter, BlazeMeter, Load Testing, Performance Analysis"],
-      "keywords": [
-        "JMeter",
-        "Performance Testing",
-        "Load Testing",
-        "BlazeMeter"
-      ]
-    },
-    {
-      "name": "RCPS Defect Reduction Initiative (Foundever)",
-      "description": "Led Root Cause Problem Solving workshops targeting systemic QA performance failures across multiple sites. Reduced recurring defects by 50% and improved Six Sigma performance from 3.09 to 3.58 sigma using DMAIC methodology.",
-      "highlights": ["Six Sigma DMAIC, RCA Frameworks"],
-      "keywords": [
-        "RCA",
-        "Six Sigma",
-        "DMAIC",
-        "Process Improvement",
-        "Quality Management"
       ]
     }
   ]
