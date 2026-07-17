@@ -1,97 +1,61 @@
-# ===============================
+# Dean Hattenhauer — Resume Generator
 
-# Resume Project Workflow Checklist
+A JSON-schema-driven resume system that generates both an ATS-safe PDF and a styled web version from a single source of truth. Update `resume.json` once, and the build process propagates changes across every rendered output.
 
-# ===============================
+## What This Is
 
-#
+- **Single source of truth**: `resume.json` holds all resume content (experience, skills, projects, certifications).
+- **Dual output**: Generates an ATS-safe PDF (Paper theme) for job applications and a styled web version (Elegant theme) for the live portfolio site.
+- **Live site**: Deployed at [deanhattenhauer.dev](https://deanhattenhauer.dev)
 
-# 1) Edit your resume
+## Tech Stack
 
-- Open resume.json in VS Code
+- Node.js / npm
+- [resume-cli](https://www.npmjs.com/package/resume-cli) — resume rendering engine
+- JSON Resume schema
+- Puppeteer (via Chrome) for PDF export
+- GitHub Pages for hosting
 
-- Make changes to experience, skills, etc.
+## Setup
 
-# 2) Preview while editing
+1. Clone the repo
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+3. Confirm `resume.json` is present in the project root
 
-- ATS-safe look (no icons):
+## Quick Start
 
-npx resume serve --theme spartan
+Preview the resume locally:
 
-- Pretty web look (with icons/layout):
+\`\`\`bash
+npm run preview:elegant
+\`\`\`
 
-npx resume serve --theme elegant
+Build both outputs (PDF + web HTML):
 
-#
-
-# 3) Rebuild outputs (PDF + Web HTML)
-
-- One command to regenerate everything:
-
+\`\`\`bash
 npm run build:all
+\`\`\`
 
-#
+Serve the built web version locally:
 
-# This will create/update:
-
-- dist/resume.pdf (ATS-safe Spartan theme)
-
-- dist/index.html (Elegant web version)
-
-#
-
-# 4) Open / share the results
-
-- Open the PDF locally:
-
-open dist/resume.pdf
-
-- Open the web version locally:
-
+\`\`\`bash
 npm run serve:web
+\`\`\`
+Then visit http://localhost:4000
 
-then go to http://localhost:4000
+## Updating Content
 
-#
+For the full step-by-step update and deployment workflow, see [`update.md`](./update.md).
 
-# 5) (Optional) Hosting the web version
+## Themes
 
-- Commit and push the dist/ folder to GitHub
+- **Paper** — ATS-safe, used for the exported PDF resume
+- **Elegant** — styled web version with icons and layout, used for the live site
+- Flat and Spartan themes also available as dev dependencies, not currently used in build scripts
 
-- Enable GitHub Pages or deploy with Netlify
+## Live Site
 
-- Share the link (this uses the Elegant theme)
-
-#
-
-# 6) Version control (optional but recommended)
-
-- Commit changes to git
-
-- Tag releases so you can roll back:
-
-git add .
-
-git commit -m "Update resume for Sept 2025"
-
-git tag resume-2025-09
-
-git push && git push --tags
-
-#
-
-# ===============================
-
-# Notes:
-
-- Use Spartan (or Paper/Flat) for ATS-safe PDFs.
-
-- Use Elegant for stylish web versions.
-
-- The build scripts in package.json bake in the
-
-correct Chrome path so PDF export always works.
-
-# ===============================
-
-# resume
+[deanhattenhauer.dev](https://deanhattenhauer.dev)
