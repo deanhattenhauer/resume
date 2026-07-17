@@ -465,14 +465,14 @@
       "description": "JavaScript web app integrating the TMDb API for movie search, detail retrieval, and random recommendations. Modular code structure with responsive UI.",
       "highlights": ["HTML, CSS, JavaScript, TMDb API"],
       "keywords": ["HTML", "CSS", "JavaScript", "TMDb API", "Frontend"],
-      "url": "https://christianblackwell.github.io/Movie-Information-Finder/"
+      "url": "https://deanhattenhauer.github.io/Movie-Information-Finder/"
     },
     {
       "name": "Weather App (Front-End)",
       "description": "Front-end weather application with real-time forecast retrieval by city and state via OpenWeatherMap API. Responsive layout for mobile and desktop.",
       "highlights": ["HTML, CSS, JavaScript, OpenWeatherMap API"],
       "keywords": ["HTML", "CSS", "JavaScript", "OpenWeatherMap API"],
-      "url": "https://christianblackwell.github.io/Weather-App/"
+      "url": "https://deanhattenhauer.github.io/Weather-App/"
     }
   ]
 }
