@@ -1,4 +1,4 @@
-# Dean Hattenhauer — Resume Generator
+# Dean Hattenhauer - Resume Generator
 
 A JSON-schema-driven resume system that generates both an ATS-safe PDF and a styled web version from a single source of truth. Update `resume.json` once, and the build process propagates changes across every rendered output.
 
