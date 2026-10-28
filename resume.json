@@ -2,14 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Dean Hattenhauer",
-    "label": "Backend Developer & Infrastructure Engineer",
-    "email": "dean.hattenhauer@outlook.com",
-    "phone": "479-255-8230",
+    "label": "Backend Developer",
     "url": "https://deanhattenhauer.dev",
-    "location": {
-      "city": "Greenwood",
-      "region": "AR"
-    },
+    "location": {},
     "profiles": [
       {
         "network": "LinkedIn",
@@ -22,7 +17,7 @@
         "url": "https://github.com/deanhattenhauer"
       }
     ],
-    "summary": "Backend developer and infrastructure engineer building toward a career in software engineering and DevOps through hands-on project work and structured backend engineering study. Completed backend engineering coursework covering Python, Go, HTTP clients and servers, SQL, data structures, and Git - building real projects including a Go REST API with JWT authentication and PostgreSQL, and an LLM-powered autonomous agent using the Google Gemini API. Also independently designed and operate a self-hosted Linux server running a full production-adjacent stack: Docker-containerized services, Prometheus and Grafana monitoring, Tailscale mesh VPN, and automated cron-based maintenance and backup pipelines - applying the same systems-level thinking to infrastructure. Brings 8+ years of process improvement and automation experience, a Lean Six Sigma Black Belt, and a professional scripting background in PowerShell and JavaScript. Approaches every system the same way: understand it before you expand it.",
+    "summary": "Backend developer building and maintaining data-driven reporting tools in Python, Go, and SQL, with a background in quality and process automation. Currently a Junior Developer at Buyers Edge Platform, where I ship features and fixes to production reporting applications, work through code review, and investigate data quality before building on it. Backend engineering coursework covered Python, Go, HTTP clients and servers, SQL, data structures, and Git, and produced a Go REST API with JWT authentication and PostgreSQL, plus an LLM-powered autonomous agent using the Google Gemini API. I also design and operate a self-hosted Linux server: Docker-containerized services, Prometheus and Grafana monitoring, a Tailscale mesh VPN, and automated cron-based maintenance and backup pipelines. Brings 8+ years of process improvement and automation experience, a Lean Six Sigma Black Belt, and a scripting background in PowerShell and JavaScript. I approach every system the same way: understand it before you expand it.",
     "picture": "dean_hattenhauer_professional_picture.jpeg"
   },
   "skills": [
@@ -112,6 +107,20 @@
     }
   ],
   "work": [
+    {
+      "name": "Buyers Edge Platform",
+      "position": "Junior Developer - Python & Go",
+      "startDate": "2026-09-08",
+      "summary": "Build and maintain Go and Python reporting tools that pull from Amazon Redshift and generate Excel deliverables for business users.",
+      "highlights": [
+        "Ship features and fixes to production reporting applications, working in Go, Python, Polars, and SQL.",
+        "Added filtering and summary metrics to a monthly contract change report, documenting design decisions such as metric denominators so reviewers and stakeholders could verify them.",
+        "Found and fixed a data-labeling bug in an existing application that was outside the assigned ticket, by validating output against the database.",
+        "Investigate data quality before building on it: traced duplicate records in a source view down to a handful of real conflicts and handed the owner a reproducible query.",
+        "Diagnosed a silent email-delivery failure for team release packages, traced it to a company policy change, and moved distribution to a shared-link process.",
+        "Work in a pull-request workflow with a repo owner and reviewer, incorporating design feedback and clarifying conflicting guidance rather than guessing."
+      ]
+    },
     {
       "name": "Experis",
       "position": "QA Content Analyst",
